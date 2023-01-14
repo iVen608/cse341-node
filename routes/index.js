@@ -1,8 +1,7 @@
 const express = require("express");
 const route = express.Router();
+const controller = require('../controllers/');
 
-route.get("/", function(req, res) {
-    res.send("Marcus Stark");
-});
-
+route.get("/contacts/", controller.testingFunction);
+route.get("/", controller.homeView);
 module.exports = route;
