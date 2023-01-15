@@ -5,6 +5,10 @@ GET http://localhost:3000/
 ###
 GET http://localhost:3000/contacts/
 ###
+GET http://localhost:3000/contacts/?id=63c23e6862102586f5c6444b
+###
+GET http://localhost:3000/contacts/?id=63c23e6862102586f5c6444c 
+###
 GET http://localhost:3000/contacts/?id=63c23e6862102586f5c6444d 
 ###
 
@@ -13,5 +17,9 @@ GET http://localhost:3000/contacts/?id=63c23e6862102586f5c6444d
 GET https://cse341wintersword.onrender.com
 ###
 GET https://cse341wintersword.onrender.com/contacts/
+###
+GET https://cse341wintersword.onrender.com/contacts/?id=63c23e6862102586f5c6444b
+###
+GET https://cse341wintersword.onrender.com/contacts/?id=63c23e6862102586f5c6444c
 ###
 GET https://cse341wintersword.onrender.com/contacts/?id=63c23e6862102586f5c6444d

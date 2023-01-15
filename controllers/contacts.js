@@ -21,4 +21,4 @@ const displayContact = async (req, res, next) => {
     })
 }
 
-module.exports = {testingFunction, homeView};
+module.exports = {displayContact, homeView};
