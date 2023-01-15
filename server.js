@@ -6,11 +6,12 @@ const port = process.env.PORT || 3000;
 
 app.use("/", destination);
 
-mongodb.initDb((err) => {
-    if (err) {
-      console.log(err);
+const callback = (error) => {
+    if(error){
+        console.log(`There was an error: ${error}`);
     } else {
-      app.listen(port);
-      console.log(`Server is running on port ${port}`);
+        app.listen(port);
     }
-  });
+}
+
+mongodb.initDb(callback);
