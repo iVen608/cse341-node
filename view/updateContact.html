@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a contact</h1>
+    <form action="/contacts/updateContact/" method="POST">
+        <input type="text" placeholder="First Name" name="firstName" id="firstName" required><br>
+        <input type="text" placeholder="Last Name" name="lastName" id="lastName" required><br>
+        <input type="text" placeholder="Email" name="email" id="email" required><br>
+        <input type="text" placeholder="Favorite Color" name="favoriteColor" id="favoriteColor" required><br>
+        <input type="text" placeholder="Birthday MM/DD/YYYY" name="birthday" id="birthday" required><br>
+        <button id="submit" type="button">Submit</button>
+    </form>
+    <script>
+        window.addEventListener("load", e => {
+            document.getElementById("submit").addEventListener('click', e => {
+                fetch('/contacts/updateContact/', {
+                    method: 'put',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        firstName: document.getElementById("firstName").value,
+                        lastName: document.getElementById("lastName").value,
+                        email: document.getElementById("email").value,
+                        favoriteColor: document.getElementById("favoriteColor").value,
+                        birthday: document.getElementById("birthday").value,
+                    })
+            })
+        })
+})
+    </script>
+</body>
+</html>

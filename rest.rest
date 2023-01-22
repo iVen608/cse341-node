@@ -11,7 +11,32 @@ GET http://localhost:3000/contacts/?id=63c23e6862102586f5c6444c
 ###
 GET http://localhost:3000/contacts/?id=63c23e6862102586f5c6444d 
 ###
+POST http://localhost:3000/contacts/addContact/ HTTP/1.1
+Content-Type: application/json
 
+{
+    "firstName": "i",
+    "lastName": "i",
+    "email": "i",
+    "favoriteColor": "i",
+    "birthday": "i"
+}
+###
+
+PUT http://localhost:3000/contacts/updateContact/?id=63c23e6862102586f5c6444d HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "u",
+    "lastName": "u",
+    "email": "u",
+    "favoriteColor": "u",
+    "birthday": "u"
+}
+###
+DELETE http://localhost:3000/contacts/delete/?id=63cb338c4827be1c74574a55 HTTP/1.1
+
+###
 //Render
 
 GET https://cse341wintersword.onrender.com
@@ -23,3 +48,30 @@ GET https://cse341wintersword.onrender.com/contacts/?id=63c23e6862102586f5c6444b
 GET https://cse341wintersword.onrender.com/contacts/?id=63c23e6862102586f5c6444c
 ###
 GET https://cse341wintersword.onrender.com/contacts/?id=63c23e6862102586f5c6444d
+###
+POST https://cse341wintersword.onrender.com//contacts/addContact/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "i",
+    "lastName": "i",
+    "email": "i",
+    "favoriteColor": "i",
+    "birthday": "i"
+}
+###
+
+PUT https://cse341wintersword.onrender.com//contacts/updateContact/?id=63c23e6862102586f5c6444d HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "u",
+    "lastName": "u",
+    "email": "u",
+    "favoriteColor": "u",
+    "birthday": "u"
+}
+###
+DELETE https://cse341wintersword.onrender.com//contacts/delete/?id=63cb338c4827be1c74574a55 HTTP/1.1
+
+###
