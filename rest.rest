@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 ###
 
-PUT http://localhost:3000/contacts/updateContact/?id=63c23e6862102586f5c6444d HTTP/1.1
+PUT http://localhost:3000/contacts/updateContact/?id=63cc9da0ec5ddebbf1a5cbce HTTP/1.1
 Content-Type: application/json
 
 {
@@ -34,7 +34,7 @@ Content-Type: application/json
     "birthday": "u"
 }
 ###
-DELETE http://localhost:3000/contacts/delete/?id=63cb338c4827be1c74574a55 HTTP/1.1
+DELETE http://localhost:3000/contacts/delete/?id=63cc9da0ec5ddebbf1a5cbce HTTP/1.1
 
 ###
 //Render
@@ -49,7 +49,7 @@ GET https://cse341wintersword.onrender.com/contacts/?id=63c23e6862102586f5c6444c
 ###
 GET https://cse341wintersword.onrender.com/contacts/?id=63c23e6862102586f5c6444d
 ###
-POST https://cse341wintersword.onrender.com//contacts/addContact/ HTTP/1.1
+POST https://cse341wintersword.onrender.com/contacts/addContact/ HTTP/1.1
 Content-Type: application/json
 
 {
@@ -61,7 +61,7 @@ Content-Type: application/json
 }
 ###
 
-PUT https://cse341wintersword.onrender.com//contacts/updateContact/?id=63c23e6862102586f5c6444d HTTP/1.1
+PUT https://cse341wintersword.onrender.com/contacts/updateContact/?id=63cc9de269463f759e205d6e HTTP/1.1
 Content-Type: application/json
 
 {
@@ -72,6 +72,6 @@ Content-Type: application/json
     "birthday": "u"
 }
 ###
-DELETE https://cse341wintersword.onrender.com//contacts/delete/?id=63cb338c4827be1c74574a55 HTTP/1.1
+DELETE https://cse341wintersword.onrender.com/contacts/delete/?id=63cc9de269463f759e205d6e HTTP/1.1
 
 ###
