@@ -5,9 +5,13 @@ const destination = require("./routes/")
 const mongodb = require('./db/connect.js');
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use("/", destination);
+
+app.use(bodyParser.urlencoded({ extended: true }))
+    .use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  }).use(bodyParser.json())
+  .use("/", destination);
 
 const callback = (error) => {
     if(error){

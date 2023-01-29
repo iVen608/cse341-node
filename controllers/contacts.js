@@ -32,7 +32,7 @@ const addContact = async (req, res, next) => {
     console.log(req.body);
     const collection = await mongodb.getDb().db().collection('contacts')
     collection.insertOne(req.body).then(result => {
-        res.redirect("/contacts/");
+        res.status(201).send();
     }).catch(err => console.log(err));
 }
 
