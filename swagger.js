@@ -2,14 +2,14 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'My API',
-    description: 'Details contact info',
+    title: 'My Medieval API',
+    description: 'Details fantasy and world settings',
   },
   host: 'cse341wintersword.onrender.com',
   schemes: ['https'],
 };
 
-const outputFile = './swagger.json';
-const endpointsFiles = ['./routes/index.js'];
+const outputFile = './swaggerTown.json';
+const endpointsFiles = ['./routes/town.js'];
 
 swaggerAutogen(outputFile, endpointsFiles, doc);

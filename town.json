@@ -1,0 +1,30 @@
+{
+    "town1": {
+        "townName": "Astelf",
+        "population": 1200,
+        "description": "A bright upcoming city centered around the study of magic.",
+        "leader": "Lief, the First",
+        "climate": "Cold",
+        "specialty": "Knowledge",
+        "government": "Monarchy"
+    },
+    "town2": {
+        "townName": "Demurac",
+        "population": 250,
+        "description": "A small town hidden in the forests of the grand city Pulf.",
+        "leader": "Thane Wolfsbane",
+        "climate": "Humid",
+        "specialty": "Agriculture",
+        "government": "Democracy"
+    },
+    "town3": {
+        "townName": "Pulf",
+        "population": 15000,
+        "description": "The capital of the empire, brimming with all sorts of societal classes.",
+        "leader": "Reyl, son of Jekl",
+        "climate": "Warm",
+        "specialty": "Economics",
+        "government": "Monarchy"
+    }
+    
+}

@@ -1,0 +1,34 @@
+{
+    "item1": {
+        "name": "Leather Gloves",
+        "description": "A well-worn pair of leather gloves",
+        "rarity": 1,
+        "equipment": "Gloves",
+        "sell": "10p",
+        "buy": "100p"
+    },
+    "item2": {
+        "name": "Iron Greatsword",
+        "description": "A fierce greatsword that can intimidate foes",
+        "rarity": 3,
+        "equipment": "Sword",
+        "sell": "2500p",
+        "buy": "10000p"
+    },
+    "item3": {
+        "name": "Emerald Pendant",
+        "description": "A stunning pendant that shimmers in the sunlight.",
+        "rarity": 2,
+        "equipment": "Necklace",
+        "sell": "1000p",
+        "buy": "3000p"
+    },
+    "item4": {
+        "name": "Lief's Staff",
+        "description": "Lief's Staff of astroligcal might.",
+        "rarity": 5,
+        "equipment": "Staff",
+        "sell": "100000000p",
+        "buy": "0p"
+    }
+}

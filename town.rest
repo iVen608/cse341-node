@@ -1,0 +1,16 @@
+GET http://localhost:3000/towns/
+###
+GET http://localhost:3000/inventory/
+###
+POST http://localhost:3000/towns/addTown/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "townName": "Testing",
+    "population": "000000000",
+    "description": "A development town.",
+    "leader": "Developer",
+    "climate": "Neutral",
+    "specialty": "Void",
+    "government": "Null"
+}
