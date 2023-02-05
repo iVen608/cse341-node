@@ -14,3 +14,20 @@ Content-Type: application/json
     "specialty": "Void",
     "government": "Null"
 }
+###
+GET https://cse341wintersword.onrender.com/towns/
+###
+GET https://cse341wintersword.onrender.com/inventory/
+###
+POST https://cse341wintersword.onrender.com/towns/addTown/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "townName": "Testing",
+    "population": "000000000",
+    "description": "A development town.",
+    "leader": "Developer",
+    "climate": "Neutral",
+    "specialty": "Void",
+    "government": "Null"
+}
