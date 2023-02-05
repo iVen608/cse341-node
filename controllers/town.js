@@ -37,7 +37,7 @@ const displayInventory = async (req, res, next) => {
 const addTown = async (req, res, next) => {
     const collection = await mongodb.getDb().db().collection('towns')
     collection.insertOne(req.body).then(result => {
-        res.status(201).send();
+        res.status(201).send(result);
     }).catch(err => res.status(500).send());
 }
 
