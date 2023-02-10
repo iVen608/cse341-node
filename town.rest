@@ -7,13 +7,28 @@ Content-Type: application/json
 
 {
     "townName": "Testing",
-    "population": "000000000",
+    "population": "02",
     "description": "A development town.",
     "leader": "Developer",
     "climate": "Neutral",
     "specialty": "Void",
     "government": "Null"
 }
+###
+PUT http://localhost:3000/towns/updateTown/?id=63e69da00b8a9b35930265f7 HTTP/1.1
+Content-Type: application/json
+
+{
+    "townName": "Update",
+    "population": "2",
+    "description": "A updated town.",
+    "leader": "Dev2",
+    "climate": "Neutral2",
+    "specialty": "Void2",
+    "government": "Null2"
+}
+###
+DELETE http://localhost:3000/towns/deleteTown/?id=63e69da00b8a9b35930265f7 HTTP/1.1
 ###
 GET https://cse341wintersword.onrender.com/towns/
 ###
@@ -24,10 +39,26 @@ Content-Type: application/json
 
 {
     "townName": "Testing",
-    "population": "000000000",
+    "population": "00001",
     "description": "A development town.",
     "leader": "Developer",
     "climate": "Neutral",
     "specialty": "Void",
     "government": "Null"
 }
+###
+PUT https://cse341wintersword.onrender.com/towns/updateTown/?id=63e69797324f63a6d259597a HTTP/1.1
+Content-Type: application/json
+
+{
+    "townName": "Update",
+    "population": "2",
+    "description": "A updated town.",
+    "leader": "Dev2",
+    "climate": "Neutral2",
+    "specialty": "Void2",
+    "government": "Null2"
+}
+###
+DELETE https://cse341wintersword.onrender.com/towns/deleteTown/?id=63e69797324f63a6d259597a HTTP/1.1
+###
