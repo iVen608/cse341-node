@@ -6,6 +6,7 @@ dotenv.config();
 passport.use(
     new googleStrat({
         callbackURL: '/auth/google/redirect',
+        scope: ['profile', 'email'],
         clientID: process.env.GOOGLE_ID,
         clientSecret: process.env.GOOGLE_SECRET
     }, () => {
