@@ -110,9 +110,7 @@ const updateTown = async (req, res, next) => {
         }).catch(err => {console.log(err); res.status(500).send();});
     } catch(err){
         res.status(500).send();
-    }
-
-    
+    }   
 }
 
 const deleteTown = async (req, res) => {

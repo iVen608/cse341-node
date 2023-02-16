@@ -5,6 +5,7 @@ const destination = require("./routes/")
 const mongodb = require('./db/connect.js');
 const port = process.env.PORT || 3000;
 const destination2 = require("./routes/town.js");
+const passportSetup = require("./controllers/passport")
 
 app.use(bodyParser.urlencoded({ extended: true }))
     .use((req, res, next) => {
