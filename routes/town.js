@@ -11,6 +11,9 @@ route.post("/towns/addTown/", controller.addTown);
 route.put("/towns/updateTown/", controller.updateTown);
 route.delete("/towns/deleteTown/", controller.deleteTown);
 route.get('/google', passport.authenticate('google'));
+route.get('/google/redirect', (req, res) => {
+    res.send("Logged in");
+})
 route.use('/api-docs', swaggerUi.serve);
 route.get('/api-docs', swaggerUi.setup(swaggerDocument));
 module.exports = route;
