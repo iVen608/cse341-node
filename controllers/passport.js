@@ -10,7 +10,15 @@ passport.use(
         scope: ['profile', 'email'],
         clientID: process.env.GOOGLE_ID,
         clientSecret: process.env.GOOGLE_SECRET
-    }, () => {
-    
-    })
-)
+    }, function(req, accToken, refToken, profile, done) {
+            console.log(profile);
+            done(null, profile);
+      }));
+      
+      passport.serializeUser(function(user, done) {
+        done(null, user);
+      });
+      
+      passport.deserializeUser(function(user, done) {
+        done(null, user);
+      });

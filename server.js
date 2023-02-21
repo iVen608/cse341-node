@@ -13,16 +13,14 @@ app.use(bodyParser.urlencoded({ extended: true }))
     .use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
-  }).use(bodyParser.json())
-  .use("/", destination2)
-  .use(session({
-    secret: 'testing',
-    resave: false,
-    saveUninitialized: true,
-    cookie: {secure: true}
-  }))
-  .use(passport.initialize())
-  .use(passport.session());
+  }).use(bodyParser.json());
+  
+  app.use(session({secret: 'testing',
+  resave: false,
+  saveUninitialized: true}));
+  app.use("/", destination2);
+  app.use(passport.initialize());
+  app.use(passport.session());
 
 const callback = (error) => {
     if(error){
