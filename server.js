@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
     saveUninitialized: true,
     cookie: {secure: true}
   }))
+  .use(passport.initialize())
   .use(passport.session());
 
 const callback = (error) => {
