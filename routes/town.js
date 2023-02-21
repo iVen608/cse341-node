@@ -12,7 +12,7 @@ route.put("/towns/updateTown/", controller.updateTown);
 route.delete("/towns/deleteTown/", controller.deleteTown);
 route.get('/google', passport.authenticate('google'));
 route.get('/google/redirect', (req, res) => {
-    res.send("Logged in" + req.user.email);
+    res.send("Logged in " + req.user.email + req.query.code);
 })
 route.use('/api-docs', swaggerUi.serve);
 route.get('/api-docs', swaggerUi.setup(swaggerDocument));
