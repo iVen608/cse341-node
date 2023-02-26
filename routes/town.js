@@ -8,8 +8,10 @@ const swaggerDocument = require('../swaggerTown.json');
 route.get("/towns/", controller.displayTowns);
 route.get("/inventory/", controller.displayInventory);
 route.post("/towns/addTown/", controller.addTown);
+route.post("/towns/addItem/", controller.addItem);
 route.put("/towns/updateTown/", controller.updateTown);
 route.delete("/towns/deleteTown/", controller.deleteTown);
+route.delete("/towns/deleteItem/", controller.deleteItem);
 route.get('/google', passport.authenticate('google'));
 /*route.get('/google/redirect', (req, res) => {
     res.send("Logged in "  + req.query.code + "\n" + req.user);
@@ -21,7 +23,6 @@ route.get('/google/redirect', passport.authenticate('google', { failureRedirect:
     res.send("Logged in "  + req.query.code + "\n" + req.user);
 })
 route.get('/protected', passport.authenticate('google'), (req, res) => {
-    console.log(req.user);
     res.send("Logged in "  + req.query.code + "\n" + req.user);
 })
 

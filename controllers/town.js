@@ -82,6 +82,28 @@ const addTown = async (req, res, next) => {
     
 }
 
+const addItem = async (req, res, next) => {
+    try{
+        const collection = await mongodb.getDb().db().collection('inventory');
+        const data = {
+            name: req.body.name,
+            description: req.body.description,
+            rarity: req.body.rarity,
+            equipment: req.body.equipment,
+            sell: req.body.sell,
+            buy: req.body.buy
+            
+        }
+        collection.insertOne(req.body).then(result => {
+            res.status(201).send(result);
+        }).catch(err => {console.log(err); res.status(500).send();});
+    }catch(err){
+        console.log(err);
+        res.status(500).send();
+    }
+    
+}
+
 const updateTown = async (req, res, next) => {
     try{
         const collection = await mongodb.getDb().db().collection('towns');
@@ -126,9 +148,24 @@ const deleteTown = async (req, res) => {
         }).catch(err => {console.log(err); res.status(500).send();});
     }catch(err){
         res.status(500).send();
-    }
-    
+    }   
+}
+
+const deleteItem = async (req, res) => {
+    try{
+        const collection = await mongodb.getDb().db().collection('inventory');
+        if(!req.query.id){
+            res.send(500).send("Missing ID to delete item");
+        }
+        const user_id = new ObjectId(req.query.id);
+        collection.deleteOne({"_id": user_id}, true
+            ).then(result => {
+                res.status(204).send();
+        }).catch(err => {console.log(err); res.status(500).send();});
+    }catch(err){
+        res.status(500).send();
+    }   
 }
 
 
-module.exports = {displayTowns, displayInventory, addTown, updateTown, deleteTown};
+module.exports = {displayTowns, displayInventory, addTown, updateTown, deleteTown, deleteItem, addItem};
